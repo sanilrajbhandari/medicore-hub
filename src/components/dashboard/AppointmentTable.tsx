@@ -3,12 +3,14 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Eye, XCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { format } from "date-fns";
 
 const statusStyles: Record<AppointmentStatus, string> = {
   Confirmed: "bg-accent/10 text-accent border-accent/20",
   Pending: "bg-warning/10 text-warning border-warning/20",
   Completed: "bg-success/10 text-success border-success/20",
   Cancelled: "bg-destructive/10 text-destructive border-destructive/20",
+  "No-show": "bg-muted text-muted-foreground border-border",
 };
 
 export const AppointmentTable = () => {
