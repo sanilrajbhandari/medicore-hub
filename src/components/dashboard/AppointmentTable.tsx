@@ -13,7 +13,9 @@ const statusStyles: Record<AppointmentStatus, string> = {
   "No-show": "bg-muted text-muted-foreground border-border",
 };
 
-export const AppointmentTable = () => {
+  const today = format(new Date(), "yyyy-MM-dd");
+  const todayAppts = appointments.filter(a => a.date === today).slice(0, 10);
+  
   return (
     <div className="bg-card rounded-xl border border-border shadow-md">
       <div className="p-4 border-b border-border">
