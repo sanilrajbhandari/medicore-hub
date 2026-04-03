@@ -58,7 +58,7 @@ export const AppointmentTable = () => {
       </div>
       {/* Mobile cards */}
       <div className="md:hidden divide-y divide-border/50">
-        {appointments.map((a) => (
+        {todayAppts.map((a) => (
           <div key={a.id} className="p-3 space-y-1.5">
             <div className="flex items-center justify-between">
               <span className="font-medium text-sm">{a.patient}</span>
