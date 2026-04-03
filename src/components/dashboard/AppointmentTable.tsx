@@ -36,7 +36,7 @@ export const AppointmentTable = () => {
             </tr>
           </thead>
           <tbody>
-            {appointments.map((a) => (
+            {todayAppts.map((a) => (
               <tr key={a.id} className="border-b border-border/50 hover:bg-muted/30 transition-colors">
                 <td className="p-3 font-medium">{a.patient}</td>
                 <td className="p-3 text-muted-foreground">{a.doctor}</td>
